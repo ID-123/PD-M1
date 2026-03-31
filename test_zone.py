@@ -23,6 +23,7 @@ def getStatus():
     else:
         status = 'inactive'
         print('\nInvalid option, selected <Inactive> by default.\n')
+    return status
 
 # Asks for student data and creates a list.
 def addStudent():
@@ -66,6 +67,7 @@ def updateStudent():
     search_id = getInt()
     for update in main_dic:
         if search_id == update['id']:
+            found = True
             updateSelect = input('Which value?\n1. ID --- 2. Name\n3. Age --- 4. Program\n5. Status\n>> ')
             if updateSelect == '1':
                 print('New ID:')
@@ -90,8 +92,9 @@ def updateStudent():
                     update['status'] = 'inactive'
                     print('Status changed to <Inactive>')
                 elif update['status'] == 'inactive':
-                    update['status'] = 'inactive'
+                    update['status'] = 'active'
                     print('Status changed to <Active>')
+            
     if not found:
         print('ID not found, try again.')
 
