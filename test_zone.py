@@ -13,7 +13,7 @@ def getInt():
 def getID():
     print('ID')
     id_student = getInt()
-    if 7 <= len(str(id_student)) <= 10:
+    if not 7 <= len(str(id_student)) <= 10:
         print('ID invalid, try again.')
         return getID()
 
@@ -21,7 +21,7 @@ def getID():
 def getAge():
     print('Age')
     age = getInt()
-    if 1 <= age <= 99 or age < 0:
+    if not 1 <= age <= 99 or age < 0:
         print('Age invalid, try again.')
         return getAge()
 
