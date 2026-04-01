@@ -27,7 +27,7 @@ def getAge():
 
 # Asks yes/no and return Active/Inactive, else sets <inactive> if invalid option.
 def getStatus():
-    status = input('Is active?\n1. Yes --- 2. No\n>  ').strip().lower()
+    status = input('Is active?\n1. Yes --- 2. No\n> ').strip().lower()
     if status in ['yes', '1']:
         status = 'active'
         print('Status set to <Active>')
@@ -45,9 +45,9 @@ def getStatus():
 def addStudent():
 
     id_student = getID()
-    name = input('Name: ')
+    name = input('Name\n> ')
     age = getAge()
-    program = input('Program: ')
+    program = input('Program\n> ')
     status = getStatus()
 
     student = {'id':id_student,'name':name,'age':age,'program':program,'status':status}
